@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="JSRiskEvaluateAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TiW-vI-flt">
+                    <rect key="frame" x="57" y="249" width="260" height="170"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="稍后会有客户经理与您联系, 请保持电话畅通" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WsU-wL-MJi">
+                            <rect key="frame" x="20" y="82" width="220" height="32"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fAI-4X-cVc">
+                            <rect key="frame" x="0.0" y="85" width="260" height="85"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wol-34-AkB">
+                                    <rect key="frame" x="30" y="10" width="200" height="30"/>
+                                    <color key="backgroundColor" red="0.99607843139999996" green="0.20784313730000001" blue="0.035294117649999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="0Yx-07-bcP"/>
+                                        <constraint firstAttribute="width" constant="200" id="ly9-1o-WFj"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="马上去风险评级">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krl-tE-0Cd">
+                                    <rect key="frame" x="104" y="45" width="52" height="30"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="30" id="Q0M-if-bJP"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="暂时不要">
+                                        <color key="titleColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="krl-tE-0Cd" secondAttribute="bottom" constant="10" id="Obd-Y7-Bgk"/>
+                                <constraint firstItem="krl-tE-0Cd" firstAttribute="centerX" secondItem="fAI-4X-cVc" secondAttribute="centerX" id="Qau-m3-g1Q"/>
+                                <constraint firstItem="Wol-34-AkB" firstAttribute="centerX" secondItem="fAI-4X-cVc" secondAttribute="centerX" id="X2G-tA-5Ja"/>
+                                <constraint firstAttribute="height" constant="85" id="cgW-qk-HpG"/>
+                                <constraint firstItem="Wol-34-AkB" firstAttribute="top" secondItem="fAI-4X-cVc" secondAttribute="top" constant="10" id="puC-Gm-Dda"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acF-oh-Hc0">
+                            <rect key="frame" x="20" y="40" width="220" height="32"/>
+                            <string key="text">为了更符合预期的投资
+请您对自己的风险接收能力进行评估</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="WsU-wL-MJi" firstAttribute="leading" secondItem="TiW-vI-flt" secondAttribute="leading" constant="20" id="EiM-0y-7Wz"/>
+                        <constraint firstItem="fAI-4X-cVc" firstAttribute="leading" secondItem="TiW-vI-flt" secondAttribute="leading" id="JAm-Ri-mFb"/>
+                        <constraint firstAttribute="trailing" secondItem="fAI-4X-cVc" secondAttribute="trailing" id="Jd4-hD-ads"/>
+                        <constraint firstItem="acF-oh-Hc0" firstAttribute="top" secondItem="TiW-vI-flt" secondAttribute="top" constant="40" id="P88-Cz-KpW"/>
+                        <constraint firstAttribute="height" constant="170" id="WfY-0G-Arb"/>
+                        <constraint firstItem="WsU-wL-MJi" firstAttribute="top" secondItem="acF-oh-Hc0" secondAttribute="bottom" constant="10" id="X9L-Vc-8DX"/>
+                        <constraint firstAttribute="trailing" secondItem="acF-oh-Hc0" secondAttribute="trailing" constant="20" id="mOt-lc-VBk"/>
+                        <constraint firstAttribute="width" constant="260" id="ms1-6X-9LN"/>
+                        <constraint firstAttribute="trailing" secondItem="WsU-wL-MJi" secondAttribute="trailing" constant="20" id="qvW-eP-a1d"/>
+                        <constraint firstAttribute="bottom" secondItem="fAI-4X-cVc" secondAttribute="bottom" id="xQu-Dj-SF2"/>
+                        <constraint firstItem="acF-oh-Hc0" firstAttribute="leading" secondItem="TiW-vI-flt" secondAttribute="leading" constant="20" id="yGA-lN-jH3"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="popup_icon_img" translatesAutoresizingMaskIntoConstraints="NO" id="DXc-PH-taB">
+                    <rect key="frame" x="147" y="198" width="80" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="86" id="3FD-b2-xMc"/>
+                        <constraint firstAttribute="width" constant="80" id="L9V-q2-B8W"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lM6-e6-Hbi">
+                    <rect key="frame" x="267" y="219" width="20" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="J4T-R8-dsL"/>
+                        <constraint firstAttribute="width" constant="20" id="lHk-ua-GoW"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="popup_icon_close"/>
+                    <connections>
+                        <action selector="RemovewAlertView:" destination="iN0-l3-epB" eventType="touchUpInside" id="STN-4X-vuP"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="TiW-vI-flt" firstAttribute="top" secondItem="DXc-PH-taB" secondAttribute="bottom" constant="-35" id="4an-fy-8ag"/>
+                <constraint firstItem="TiW-vI-flt" firstAttribute="top" secondItem="lM6-e6-Hbi" secondAttribute="bottom" id="acE-i2-ERV"/>
+                <constraint firstItem="TiW-vI-flt" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="cov-4j-SB9"/>
+                <constraint firstItem="TiW-vI-flt" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="j90-GV-urP"/>
+                <constraint firstItem="lM6-e6-Hbi" firstAttribute="trailing" secondItem="TiW-vI-flt" secondAttribute="trailing" constant="-30" id="lWe-Q5-V9e"/>
+                <constraint firstItem="DXc-PH-taB" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="teZ-fF-77f"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <connections>
+                <outlet property="RiskAlertView" destination="TiW-vI-flt" id="sba-32-bad"/>
+                <outlet property="bottomAlertHeight" destination="cgW-qk-HpG" id="6vL-ar-Tz5"/>
+                <outlet property="bottomView" destination="fAI-4X-cVc" id="n0g-cQ-7uA"/>
+                <outlet property="dismissBtn" destination="lM6-e6-Hbi" id="m3v-P9-oey"/>
+                <outlet property="gotoEvaluateBtn" destination="Wol-34-AkB" id="O3h-zM-N5X"/>
+                <outlet property="noRiskBtn" destination="krl-tE-0Cd" id="CO9-IA-7kZ"/>
+                <outlet property="riskAlertHeight" destination="WfY-0G-Arb" id="thc-FC-66f"/>
+                <outlet property="textLabel" destination="WsU-wL-MJi" id="3eX-md-0rE"/>
+                <outlet property="titleLabel" destination="acF-oh-Hc0" id="Z6z-mi-BeT"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="popup_icon_close" width="20" height="30"/>
+        <image name="popup_icon_img" width="79" height="86"/>
+    </resources>
+</document>
