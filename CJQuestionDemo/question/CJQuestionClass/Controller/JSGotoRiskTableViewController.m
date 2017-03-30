@@ -9,23 +9,17 @@
 #import "JSGotoRiskTableViewController.h"
 #import "JSRiskEvaluateModel.h"
 #import "MJExtension.h"
-//#import "CJNetWorkTools.h"
 #import "JSGotoRiskCell.h"
 #import "JSGotoRiskQuestionTableViewCell.h"
 #import "JSQuestionTableViewCell.h"
 #import "UIView+CCJExtension.h"
 #import "JSRiskEvaluateAlertView.h"
-//#import "CJWebworkTools.h"
-//#import "JSFindWebViewController.h"
 #import "JSRiskFooterView.h"
-// 若引用
-#define CCJWeakSelf __weak typeof(self) weakSelf = self;
-#define screenW [UIScreen mainScreen].bounds.size.width
+
 #define kScreenW [UIScreen mainScreen].bounds.size.width
 #define kScreenH [UIScreen mainScreen].bounds.size.height
 #define kObjcNull           ((id)[NSNull null])
 #define LINESPACE 6
-
 
 @interface JSGotoRiskTableViewController ()<UIGestureRecognizerDelegate>
 @property (nonatomic, strong) NSArray       *dataArray; // 装tableViewCell组的数组
@@ -70,9 +64,6 @@
 @property (nonatomic, assign) NSInteger index9;
 @property (strong, nonatomic) UIView *RiskAlertView;
 @property (nonatomic, strong) JSRiskEvaluateAlertView *nView;
-
-//@property (nonatomic, strong) JSQuestionTableViewCell *cell;
-
 @property (nonatomic, assign) BOOL isAllSelect;
 @property (nonatomic, assign) BOOL isNeedPop;
 @property (nonatomic, strong) JSRiskFooterView *footview;
@@ -87,10 +78,9 @@ static NSString * const questionTitle = @"QuestionTitle";
     [super viewDidLoad];
     
     [self loadData:YES changeType:NO selectedIndex:1];
-    self.title = @"风险评估";
+    self.title = @"问卷调查";
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JSGotoRiskCell class]) bundle:nil] forCellReuseIdentifier:question];
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([JSGotoRiskQuestionTableViewCell class]) bundle:nil] forCellReuseIdentifier:questionTitle];
-//    self.tableView.backgroundColor = UIColorFromRGB(0xF8F8F8);
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
 //    [self setCommitBtnAndAttendBtn];
     
@@ -218,90 +208,8 @@ static NSString * const questionTitle = @"QuestionTitle";
             self.riskScore = _score1 + _score2 + _score3 + _score4 + _score5 + _score6 + _score7 + _score8 + _score9 + _score10;
             
             NSLog(@"self.riskScore = %d",self.riskScore);
-            CCJWeakSelf;
-//            // 在发请求前一定要先停止以前的请求
-//            CJNetWorkTools *manager = [CJNetWorkTools shareNetworkTools];
-//            [manager.tasks makeObjectsPerformSelector:@selector(cancel)];
-//            manager.requestSerializer = [AFJSONRequestSerializer serializer];
-//            [manager.requestSerializer setValue:@"Content-type" forHTTPHeaderField:@"application/json;charset=UTF-8"];
-//            
-//            NSString *sessionId = [NSString stringWithFormat:@"%@",[MPNetworkService sharedService].sessionID];
-//            NSString *deviceId = [[[UIDevice currentDevice] identifierForVendor] UUIDString];
-//            NSString *versonCode = [NSString
-//                                    stringWithFormat:@"%@",
-//                                    [[NSBundle mainBundle]
-//                                     objectForInfoDictionaryKey:(NSString *)
-//                                     kCFBundleVersionKey]];
-//            // 2.利用AFN发送请求
-//            NSDictionary *dict = @{
-//                                   @"messageId":@"saveEvaluationData",
-//                                   @"sessionId":sessionId,
-//                                   @"deviceId":deviceId,
-//                                   @"versionCode":versonCode,
-//                                   @"riskScore":@(self.riskScore),
-//                                   };
-//            [manager POST:@"saveEvaluationData" parameters:dict success:^(NSURLSessionDataTask *task, id responseObject) {
-//                NSNumber *statusCode = responseObject[@"statusCode"];
-//                NSLog(@"statusCode1111 = %@", statusCode);
-//                if ([statusCode  isEqual: @0])
-//                {
-//                    
-//                    
-////                    if ([self.riskScore isEqualToString:@"null"] || (self.riskScore.length == 0))
-////                    {
-////                        self.riskLevel.text = @"您目前的风险评级为:暂无评级";
-////                    }else
-//                    NSString *str;
-//                    if (self.riskScore < 20)
-//                    {
-////                        self.riskLevel.text = @"您目前的风险评级为: 保守型";
-//                        str = [NSString stringWithFormat:@"您好, 您的测试结果为:20分以下,属于保守型的投资人, 可以考虑货币型等低风险产品"];
-//                        [self addRiskEvaluateViewWithTitle1:str];
-//                    }else if (self.riskScore >= 20 && self.riskScore <= 39)
-//                    {
-////                        self.riskLevel.text = @"您目前的风险评级为: 稳健型";
-//                        str = [NSString stringWithFormat:@"您好, 您的测试结果为:20分-39分,属于稳健型的投资人, 我们建议您考虑的投资产品应该可让资本金不被通货膨胀侵蚀,产品预期收益率较高但价格波动性也高于保守型的投资人, 您可以考虑风险较低的债券型产品, 并少量介入风险承担较高的产品"];
-//                        [self addRiskEvaluateViewWithTitle2:str];
-//                    }else if (self.riskScore > 39)
-//                    {
-////                     self.riskLevel.text = @"您目前的风险评级为: 积极型";
-//                        str = [NSString stringWithFormat:@"您好, 您的测试结果为:大于39分,属于积极型的投资人, 我们建议您考虑投资品的投资收益率远高于通货膨胀率, 您既可以考虑低分险产品,也可以考虑部分持有风险程度较高的产品"];
-//                        [self addRiskEvaluateViewWithTitle3:str];
-//                    }
-//
-//                    
-//                    
-//                    // 在设置中也保存评级分数, 确保投资的时候分数准确
-//                    [MPNetworkService sharedService].riskScore = [NSString stringWithFormat:@"%d", self.riskScore];
-//
-//                    NSLog(@"saveEvaluationData~~~ ");
-//                    
-//                    //            [SVProgressHUD showSuccessWithStatus:@"数据提交成功!"];
-//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                        //                [SVProgressHUD dismiss];
-//                        //                [self noRiskEvaluate];
-//                        //                [self.navigationController popViewControllerAnimated:YES];
-//                    });
-//                    
-//                }else
-//                {
-//                    [SVProgressHUD showErrorWithStatus:@"请求异常,请稍后重试"];
-//                    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                        [SVProgressHUD dismiss];
-//                    });
-//                }
-//                
-//                [weakSelf.tableView reloadData];
-//                
-//            } failure:^(NSURLSessionDataTask *task, NSError *error) {
-//                
-//                [SVProgressHUD showErrorWithStatus:@"网络错误请稍后重试"];
-//                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//                    [SVProgressHUD dismiss];
-//                    
-//                });
-//                NSLog(@"error = %@", error);
-//            }];
+
+            // 在这里可以发送请求将总分数上传
             
         }else
         {
@@ -311,33 +219,10 @@ static NSString * const questionTitle = @"QuestionTitle";
         
   }else
     {
-      
-        
-//        [SVProgressHUD showInfoWithStatus:@"请同意《投资人入会申请》"];
-//        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//            [SVProgressHUD dismiss];
-//            
-//        });
-
+        [[[UIAlertView alloc] initWithTitle:@"提示" message:@"请同意《投资人入会申请》" delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil] show];
     }
     
 }
-
-// 点击投资人入会申请
-//- (void)seeTheApplicationForm
-//{
-//    CJWebworkTools *webwork = [[CJWebworkTools alloc] init];
-//    
-//    NSString *webstr = [webwork webString];
-//    NSString *urlNewinfo = [NSString stringWithFormat:@"%@riskAgreement",webstr];
-//    NSURL *url  = [NSURL URLWithString:urlNewinfo];
-//    JSFindWebViewController *findWebview = [[JSFindWebViewController alloc] init];
-//    findWebview.webViewUrl = url;
-//    findWebview.titleString = @"question";
-//    //    findWebview.titleLab = cell.fridens.title;
-//    [self.navigationController pushViewController:findWebview animated:YES];
-//}
-
 
 - (void)addRiskEvaluateViewWithTitle:(NSString *)title
 {
@@ -474,13 +359,6 @@ static NSString * const questionTitle = @"QuestionTitle";
             [self.tableView layoutIfNeeded];
             //刷新完成
             [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
-//            dispatch_async(dispatch_get_main_queue(), ^{
-//                //刷新完成
-//                //刷新完成
-//                [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:i]  atScrollPosition:UITableViewScrollPositionTop animated:YES];
-//            });
-//            
-
             return;
         }
     }
@@ -518,20 +396,9 @@ static NSString * const questionTitle = @"QuestionTitle";
     if (!_cellMarkArray)
     {
         _cellMarkArray = [NSMutableArray arrayWithObjects:kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull, kObjcNull,nil];
-//        _cellMarkArray = [NSMutableArray array];
     }
     return _cellMarkArray;
 }
-
-//- (NSMutableDictionary *)cellMarkDic
-//{
-//    if (!_cellMarkDic)
-//    {
-//        _cellMarkDic = [NSMutableDictionary dictionary];;
-//    }
-//    return _cellMarkDic;
-//}
-
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
@@ -552,55 +419,12 @@ static NSString * const questionTitle = @"QuestionTitle";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    JSQuestionTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:question forIndexPath:indexPath];
-    
-//    cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    
-    
-//    JSQuestionTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-//    if (cell == nil) {
-//        cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSQuestionTableViewCell class]) owner:nil options:nil] lastObject];
-//    }
-
-    
-//    cell.riskModel = _dataArray[indexPath.row];
-//    cell.index = (int)indexPath.row ;
-    
-    
-    
-//    if ([self.cellMarkArray[indexPath.section] isKindOfClass:[NSMutableDictionary class]])
-//    {
-//         NSMutableDictionary *dic = self.cellMarkArray[indexPath.section];
-//    }
-    
-//    if (_cellMarkArray.count != 0)
-//    {
-////        for (int i = 0; i < self.cellMarkArray.count; i++)
-////        {
-////            
-////        }
-//        
-//        for (NSDictionary *dic in self.cellMarkArray) {
-//            if ([[dic objectForKey:@"0"] isEqualToString:@"1"])
-//        }
-//    }
-    
-    
-
-     NSLog(@"indexPath.section = %ld", indexPath.section);
-    id dic = self.cellMarkArray[indexPath.section];
-    NSLog(@"dic  = %@", dic);
-    
     // 思路 , 先取出字典保存的选中的标识, 根据标识队形生成按钮的状态
     
     JSRiskEvaluateModel *riskModel = _dataArray[indexPath.section];
     
-   
     if (indexPath.section == 0)
     {
-//        if (self.cellMarkArray.count != 0)
-//        {
-        
         // 如果是字典类, 说明这个组的在数组中的位置为字典, 说明之前有点击过这个组的按钮
         if ([self.cellMarkArray[indexPath.section] isKindOfClass:[NSMutableDictionary class]] )
         {
@@ -1024,10 +848,8 @@ static NSString * const questionTitle = @"QuestionTitle";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
     if (indexPath.section == 0)
     {
-        
         JSRiskEvaluateModel *riskModel = _dataArray[indexPath.section];
         NSMutableDictionary *cellMarkDic = [NSMutableDictionary dictionary];
 
@@ -1919,10 +1741,6 @@ static NSString * const questionTitle = @"QuestionTitle";
 //        [self.cellMarkArray insertObject:cellMarkDic atIndex:9];
         [self.cellMarkArray replaceObjectAtIndex:9 withObject:cellMarkDic];
     }
-
-
-
-    NSLog(@"self.score1 = %d",self.score1);
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
@@ -1964,7 +1782,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
         if (cell == nil) {
@@ -1979,7 +1796,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
         if (cell == nil) {
@@ -1995,8 +1811,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
-        
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
         if (cell == nil) {
@@ -2012,7 +1826,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
    
         if (cell == nil) {
@@ -2035,7 +1848,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
         if (cell == nil) {
@@ -2071,9 +1883,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-        
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
-        
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
         if (cell == nil) {
@@ -2089,7 +1898,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2104,7 +1912,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2120,7 +1927,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2141,7 +1947,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2166,12 +1971,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-        
-        
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2183,10 +1983,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2199,10 +1996,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2215,7 +2009,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2236,7 +2029,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2262,13 +2054,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-        
-        
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2280,11 +2066,8 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
-        if (cell == nil) {
+         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
         cell.line.hidden = YES;
@@ -2295,7 +2078,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2312,7 +2094,6 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
         
 
@@ -2334,10 +2115,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2360,13 +2138,8 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-        
-        
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
-        if (cell == nil) {
+         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
         cell.line.hidden = YES;
@@ -2377,10 +2150,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2392,10 +2162,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2408,10 +2175,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2430,11 +2194,8 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
-        if (cell == nil) {
+         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -2456,12 +2217,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 1)
     {
-        
-        
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2473,10 +2229,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 2)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2488,10 +2241,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else if (indexPath.row == 3)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2504,10 +2254,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         
     }else if (indexPath.row == 4)
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }
@@ -2525,10 +2272,7 @@ static NSString * const questionTitle = @"QuestionTitle";
         return cell;
     }else
     {
-//        JSGotoRiskCell *cell = [tableView dequeueReusableCellWithIdentifier:question];
         JSGotoRiskCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-        
-
         if (cell == nil) {
             cell = [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([JSGotoRiskCell class]) owner:nil options:nil] lastObject];
         }

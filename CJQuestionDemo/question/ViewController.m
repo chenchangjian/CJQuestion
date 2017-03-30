@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.title = @"问卷调查";
 }
 
 
@@ -29,7 +30,7 @@
 - (IBAction)gotoriskController:(id)sender {
     
     JSGotoRiskTableViewController *risk = [[JSGotoRiskTableViewController alloc] init];
-    [self presentViewController:risk animated:YES completion:nil];
+    [self.navigationController pushViewController:risk animated:YES];
 }
 
 @end

@@ -15,19 +15,6 @@
 		668B866A1E88FC2C000E541B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 668B86681E88FC2C000E541B /* LaunchScreen.storyboard */; };
 		668B86751E88FC2C000E541B /* questionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B86741E88FC2C000E541B /* questionTests.m */; };
 		668B86801E88FC2C000E541B /* questionUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B867F1E88FC2C000E541B /* questionUITests.m */; };
-		668B87641E88FE22000E541B /* JSGotoRiskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B874F1E88FE22000E541B /* JSGotoRiskCell.m */; };
-		668B87651E88FE22000E541B /* JSGotoRiskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B87501E88FE22000E541B /* JSGotoRiskCell.xib */; };
-		668B87671E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87541E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.m */; };
-		668B87681E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B87551E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.xib */; };
-		668B87691E88FE22000E541B /* JSGotoRiskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87571E88FE22000E541B /* JSGotoRiskTableViewController.m */; };
-		668B876A1E88FE22000E541B /* JSQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87591E88FE22000E541B /* JSQuestionTableViewCell.m */; };
-		668B876B1E88FE22000E541B /* JSQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B875A1E88FE22000E541B /* JSQuestionTableViewCell.xib */; };
-		668B876C1E88FE22000E541B /* JSRiskEvaluateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B875C1E88FE22000E541B /* JSRiskEvaluateAlertView.m */; };
-		668B876D1E88FE22000E541B /* JSRiskEvaluateAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B875D1E88FE22000E541B /* JSRiskEvaluateAlertView.xib */; };
-		668B876E1E88FE22000E541B /* JSRiskEvaluateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B875F1E88FE22000E541B /* JSRiskEvaluateModel.m */; };
-		668B876F1E88FE22000E541B /* JSRiskFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87611E88FE22000E541B /* JSRiskFooterView.m */; };
-		668B87701E88FE22000E541B /* JSRiskFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 668B87621E88FE22000E541B /* JSRiskFooterView.xib */; };
-		668B87711E88FE22000E541B /* risk.json in Resources */ = {isa = PBXBuildFile; fileRef = 668B87631E88FE22000E541B /* risk.json */; };
 		668B87891E88FF08000E541B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 668B87731E88FF08000E541B /* Info.plist */; };
 		668B878A1E88FF08000E541B /* MJExtensionConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87761E88FF08000E541B /* MJExtensionConst.m */; };
 		668B878B1E88FF08000E541B /* MJFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 668B87781E88FF08000E541B /* MJFoundation.m */; };
@@ -65,6 +52,21 @@
 		668B87E61E8904B5000E541B /* icon_d_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 668B87DC1E8904B5000E541B /* icon_d_on@2x.png */; };
 		668B87E71E8904B5000E541B /* icon_e@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 668B87DD1E8904B5000E541B /* icon_e@2x.png */; };
 		668B87E81E8904B5000E541B /* icon_e_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 668B87DE1E8904B5000E541B /* icon_e_on@2x.png */; };
+		66B4926A1E8D014400C8CD37 /* icon_radio_on@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B492681E8D014400C8CD37 /* icon_radio_on@3x.png */; };
+		66B4926B1E8D014400C8CD37 /* icon_radio@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 66B492691E8D014400C8CD37 /* icon_radio@3x.png */; };
+		66B4926D1E8D020200C8CD37 /* risk.json in Resources */ = {isa = PBXBuildFile; fileRef = 66B4926C1E8D020200C8CD37 /* risk.json */; };
+		66B492851E8D020D00C8CD37 /* JSGotoRiskTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B492711E8D020D00C8CD37 /* JSGotoRiskTableViewController.m */; };
+		66B492861E8D020D00C8CD37 /* JSRiskEvaluateModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B492741E8D020D00C8CD37 /* JSRiskEvaluateModel.m */; };
+		66B492871E8D020D00C8CD37 /* JSGotoRiskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B492771E8D020D00C8CD37 /* JSGotoRiskCell.m */; };
+		66B492881E8D020D00C8CD37 /* JSGotoRiskCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B492781E8D020D00C8CD37 /* JSGotoRiskCell.xib */; };
+		66B492891E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B4927A1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.m */; };
+		66B4928A1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B4927B1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.xib */; };
+		66B4928B1E8D020D00C8CD37 /* JSQuestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B4927D1E8D020D00C8CD37 /* JSQuestionTableViewCell.m */; };
+		66B4928C1E8D020D00C8CD37 /* JSQuestionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B4927E1E8D020D00C8CD37 /* JSQuestionTableViewCell.xib */; };
+		66B4928D1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B492801E8D020D00C8CD37 /* JSRiskEvaluateAlertView.m */; };
+		66B4928E1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B492811E8D020D00C8CD37 /* JSRiskEvaluateAlertView.xib */; };
+		66B4928F1E8D020D00C8CD37 /* JSRiskFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 66B492831E8D020D00C8CD37 /* JSRiskFooterView.m */; };
+		66B492901E8D020D00C8CD37 /* JSRiskFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 66B492841E8D020D00C8CD37 /* JSRiskFooterView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,26 +103,6 @@
 		668B867B1E88FC2C000E541B /* questionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = questionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		668B867F1E88FC2C000E541B /* questionUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = questionUITests.m; sourceTree = "<group>"; };
 		668B86811E88FC2C000E541B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		668B874E1E88FE22000E541B /* JSGotoRiskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskCell.h; sourceTree = "<group>"; };
-		668B874F1E88FE22000E541B /* JSGotoRiskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskCell.m; sourceTree = "<group>"; };
-		668B87501E88FE22000E541B /* JSGotoRiskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSGotoRiskCell.xib; sourceTree = "<group>"; };
-		668B87531E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskQuestionTableViewCell.h; sourceTree = "<group>"; };
-		668B87541E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskQuestionTableViewCell.m; sourceTree = "<group>"; };
-		668B87551E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSGotoRiskQuestionTableViewCell.xib; sourceTree = "<group>"; };
-		668B87561E88FE22000E541B /* JSGotoRiskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskTableViewController.h; sourceTree = "<group>"; };
-		668B87571E88FE22000E541B /* JSGotoRiskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskTableViewController.m; sourceTree = "<group>"; };
-		668B87581E88FE22000E541B /* JSQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQuestionTableViewCell.h; sourceTree = "<group>"; };
-		668B87591E88FE22000E541B /* JSQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQuestionTableViewCell.m; sourceTree = "<group>"; };
-		668B875A1E88FE22000E541B /* JSQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQuestionTableViewCell.xib; sourceTree = "<group>"; };
-		668B875B1E88FE22000E541B /* JSRiskEvaluateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskEvaluateAlertView.h; sourceTree = "<group>"; };
-		668B875C1E88FE22000E541B /* JSRiskEvaluateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskEvaluateAlertView.m; sourceTree = "<group>"; };
-		668B875D1E88FE22000E541B /* JSRiskEvaluateAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRiskEvaluateAlertView.xib; sourceTree = "<group>"; };
-		668B875E1E88FE22000E541B /* JSRiskEvaluateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskEvaluateModel.h; sourceTree = "<group>"; };
-		668B875F1E88FE22000E541B /* JSRiskEvaluateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskEvaluateModel.m; sourceTree = "<group>"; };
-		668B87601E88FE22000E541B /* JSRiskFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskFooterView.h; sourceTree = "<group>"; };
-		668B87611E88FE22000E541B /* JSRiskFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskFooterView.m; sourceTree = "<group>"; };
-		668B87621E88FE22000E541B /* JSRiskFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRiskFooterView.xib; sourceTree = "<group>"; };
-		668B87631E88FE22000E541B /* risk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = risk.json; sourceTree = "<group>"; };
 		668B87731E88FF08000E541B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		668B87741E88FF08000E541B /* MJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtension.h; sourceTree = "<group>"; };
 		668B87751E88FF08000E541B /* MJExtensionConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MJExtensionConst.h; sourceTree = "<group>"; };
@@ -188,6 +170,28 @@
 		668B87DC1E8904B5000E541B /* icon_d_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_d_on@2x.png"; sourceTree = "<group>"; };
 		668B87DD1E8904B5000E541B /* icon_e@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_e@2x.png"; sourceTree = "<group>"; };
 		668B87DE1E8904B5000E541B /* icon_e_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_e_on@2x.png"; sourceTree = "<group>"; };
+		66B492681E8D014400C8CD37 /* icon_radio_on@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_radio_on@3x.png"; sourceTree = "<group>"; };
+		66B492691E8D014400C8CD37 /* icon_radio@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_radio@3x.png"; sourceTree = "<group>"; };
+		66B4926C1E8D020200C8CD37 /* risk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = risk.json; sourceTree = "<group>"; };
+		66B492701E8D020D00C8CD37 /* JSGotoRiskTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskTableViewController.h; sourceTree = "<group>"; };
+		66B492711E8D020D00C8CD37 /* JSGotoRiskTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskTableViewController.m; sourceTree = "<group>"; };
+		66B492731E8D020D00C8CD37 /* JSRiskEvaluateModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskEvaluateModel.h; sourceTree = "<group>"; };
+		66B492741E8D020D00C8CD37 /* JSRiskEvaluateModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskEvaluateModel.m; sourceTree = "<group>"; };
+		66B492761E8D020D00C8CD37 /* JSGotoRiskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskCell.h; sourceTree = "<group>"; };
+		66B492771E8D020D00C8CD37 /* JSGotoRiskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskCell.m; sourceTree = "<group>"; };
+		66B492781E8D020D00C8CD37 /* JSGotoRiskCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSGotoRiskCell.xib; sourceTree = "<group>"; };
+		66B492791E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSGotoRiskQuestionTableViewCell.h; sourceTree = "<group>"; };
+		66B4927A1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSGotoRiskQuestionTableViewCell.m; sourceTree = "<group>"; };
+		66B4927B1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSGotoRiskQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		66B4927C1E8D020D00C8CD37 /* JSQuestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQuestionTableViewCell.h; sourceTree = "<group>"; };
+		66B4927D1E8D020D00C8CD37 /* JSQuestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQuestionTableViewCell.m; sourceTree = "<group>"; };
+		66B4927E1E8D020D00C8CD37 /* JSQuestionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQuestionTableViewCell.xib; sourceTree = "<group>"; };
+		66B4927F1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskEvaluateAlertView.h; sourceTree = "<group>"; };
+		66B492801E8D020D00C8CD37 /* JSRiskEvaluateAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskEvaluateAlertView.m; sourceTree = "<group>"; };
+		66B492811E8D020D00C8CD37 /* JSRiskEvaluateAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRiskEvaluateAlertView.xib; sourceTree = "<group>"; };
+		66B492821E8D020D00C8CD37 /* JSRiskFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSRiskFooterView.h; sourceTree = "<group>"; };
+		66B492831E8D020D00C8CD37 /* JSRiskFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSRiskFooterView.m; sourceTree = "<group>"; };
+		66B492841E8D020D00C8CD37 /* JSRiskFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSRiskFooterView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -238,7 +242,7 @@
 		668B86591E88FC2C000E541B /* question */ = {
 			isa = PBXGroup;
 			children = (
-				668B874D1E88FE22000E541B /* riskQuestionCell */,
+				66B4926E1E8D020D00C8CD37 /* CJQuestionClass */,
 				668B87D41E8904B5000E541B /* 图片资源 */,
 				668B865D1E88FC2C000E541B /* AppDelegate.h */,
 				668B865E1E88FC2C000E541B /* AppDelegate.m */,
@@ -250,6 +254,7 @@
 				668B86661E88FC2C000E541B /* Assets.xcassets */,
 				668B86681E88FC2C000E541B /* LaunchScreen.storyboard */,
 				668B866B1E88FC2C000E541B /* Info.plist */,
+				66B4926C1E8D020200C8CD37 /* risk.json */,
 				668B865A1E88FC2C000E541B /* Supporting Files */,
 			);
 			path = question;
@@ -282,33 +287,6 @@
 				668B86811E88FC2C000E541B /* Info.plist */,
 			);
 			path = questionUITests;
-			sourceTree = "<group>";
-		};
-		668B874D1E88FE22000E541B /* riskQuestionCell */ = {
-			isa = PBXGroup;
-			children = (
-				668B874E1E88FE22000E541B /* JSGotoRiskCell.h */,
-				668B874F1E88FE22000E541B /* JSGotoRiskCell.m */,
-				668B87501E88FE22000E541B /* JSGotoRiskCell.xib */,
-				668B87531E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.h */,
-				668B87541E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.m */,
-				668B87551E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.xib */,
-				668B87561E88FE22000E541B /* JSGotoRiskTableViewController.h */,
-				668B87571E88FE22000E541B /* JSGotoRiskTableViewController.m */,
-				668B87581E88FE22000E541B /* JSQuestionTableViewCell.h */,
-				668B87591E88FE22000E541B /* JSQuestionTableViewCell.m */,
-				668B875A1E88FE22000E541B /* JSQuestionTableViewCell.xib */,
-				668B875B1E88FE22000E541B /* JSRiskEvaluateAlertView.h */,
-				668B875C1E88FE22000E541B /* JSRiskEvaluateAlertView.m */,
-				668B875D1E88FE22000E541B /* JSRiskEvaluateAlertView.xib */,
-				668B875E1E88FE22000E541B /* JSRiskEvaluateModel.h */,
-				668B875F1E88FE22000E541B /* JSRiskEvaluateModel.m */,
-				668B87601E88FE22000E541B /* JSRiskFooterView.h */,
-				668B87611E88FE22000E541B /* JSRiskFooterView.m */,
-				668B87621E88FE22000E541B /* JSRiskFooterView.xib */,
-				668B87631E88FE22000E541B /* risk.json */,
-			);
-			path = riskQuestionCell;
 			sourceTree = "<group>";
 		};
 		668B87721E88FF08000E541B /* MJExtension */ = {
@@ -390,6 +368,8 @@
 		668B87D41E8904B5000E541B /* 图片资源 */ = {
 			isa = PBXGroup;
 			children = (
+				66B492681E8D014400C8CD37 /* icon_radio_on@3x.png */,
+				66B492691E8D014400C8CD37 /* icon_radio@3x.png */,
 				668B87D51E8904B5000E541B /* icon_a@2x.png */,
 				668B87D61E8904B5000E541B /* icon_a_on@2x.png */,
 				668B87D71E8904B5000E541B /* icon_b@2x.png */,
@@ -402,6 +382,56 @@
 				668B87DE1E8904B5000E541B /* icon_e_on@2x.png */,
 			);
 			path = "图片资源";
+			sourceTree = "<group>";
+		};
+		66B4926E1E8D020D00C8CD37 /* CJQuestionClass */ = {
+			isa = PBXGroup;
+			children = (
+				66B4926F1E8D020D00C8CD37 /* Controller */,
+				66B492721E8D020D00C8CD37 /* Model */,
+				66B492751E8D020D00C8CD37 /* View */,
+			);
+			path = CJQuestionClass;
+			sourceTree = "<group>";
+		};
+		66B4926F1E8D020D00C8CD37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66B492701E8D020D00C8CD37 /* JSGotoRiskTableViewController.h */,
+				66B492711E8D020D00C8CD37 /* JSGotoRiskTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		66B492721E8D020D00C8CD37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				66B492731E8D020D00C8CD37 /* JSRiskEvaluateModel.h */,
+				66B492741E8D020D00C8CD37 /* JSRiskEvaluateModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		66B492751E8D020D00C8CD37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66B492761E8D020D00C8CD37 /* JSGotoRiskCell.h */,
+				66B492771E8D020D00C8CD37 /* JSGotoRiskCell.m */,
+				66B492781E8D020D00C8CD37 /* JSGotoRiskCell.xib */,
+				66B492791E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.h */,
+				66B4927A1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.m */,
+				66B4927B1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.xib */,
+				66B4927C1E8D020D00C8CD37 /* JSQuestionTableViewCell.h */,
+				66B4927D1E8D020D00C8CD37 /* JSQuestionTableViewCell.m */,
+				66B4927E1E8D020D00C8CD37 /* JSQuestionTableViewCell.xib */,
+				66B4927F1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.h */,
+				66B492801E8D020D00C8CD37 /* JSRiskEvaluateAlertView.m */,
+				66B492811E8D020D00C8CD37 /* JSRiskEvaluateAlertView.xib */,
+				66B492821E8D020D00C8CD37 /* JSRiskFooterView.h */,
+				66B492831E8D020D00C8CD37 /* JSRiskFooterView.m */,
+				66B492841E8D020D00C8CD37 /* JSRiskFooterView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,24 +542,26 @@
 			files = (
 				668B87E11E8904B5000E541B /* icon_b@2x.png in Resources */,
 				668B87DF1E8904B5000E541B /* icon_a@2x.png in Resources */,
-				668B876B1E88FE22000E541B /* JSQuestionTableViewCell.xib in Resources */,
-				668B876D1E88FE22000E541B /* JSRiskEvaluateAlertView.xib in Resources */,
 				668B87E41E8904B5000E541B /* icon_c_on@2x.png in Resources */,
+				66B492901E8D020D00C8CD37 /* JSRiskFooterView.xib in Resources */,
 				668B87E51E8904B5000E541B /* icon_d@2x.png in Resources */,
+				66B4928C1E8D020D00C8CD37 /* JSQuestionTableViewCell.xib in Resources */,
 				668B866A1E88FC2C000E541B /* LaunchScreen.storyboard in Resources */,
 				668B87E71E8904B5000E541B /* icon_e@2x.png in Resources */,
-				668B87711E88FE22000E541B /* risk.json in Resources */,
 				668B86671E88FC2C000E541B /* Assets.xcassets in Resources */,
-				668B87651E88FE22000E541B /* JSGotoRiskCell.xib in Resources */,
-				668B87701E88FE22000E541B /* JSRiskFooterView.xib in Resources */,
+				66B4928E1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.xib in Resources */,
+				66B4926B1E8D014400C8CD37 /* icon_radio@3x.png in Resources */,
 				668B86651E88FC2C000E541B /* Main.storyboard in Resources */,
+				66B4928A1E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.xib in Resources */,
+				66B4926D1E8D020200C8CD37 /* risk.json in Resources */,
+				66B4926A1E8D014400C8CD37 /* icon_radio_on@3x.png in Resources */,
 				668B87891E88FF08000E541B /* Info.plist in Resources */,
 				668B87E81E8904B5000E541B /* icon_e_on@2x.png in Resources */,
 				668B87E31E8904B5000E541B /* icon_c@2x.png in Resources */,
+				66B492881E8D020D00C8CD37 /* JSGotoRiskCell.xib in Resources */,
 				668B87E21E8904B5000E541B /* icon_b_on@2x.png in Resources */,
 				668B87E61E8904B5000E541B /* icon_d_on@2x.png in Resources */,
 				668B87E01E8904B5000E541B /* icon_a_on@2x.png in Resources */,
-				668B87681E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,35 +591,35 @@
 				668B86621E88FC2C000E541B /* ViewController.m in Sources */,
 				668B87CF1E890346000E541B /* UIButton+AFNetworking.m in Sources */,
 				668B87911E88FF08000E541B /* NSObject+MJKeyValue.m in Sources */,
-				668B876C1E88FE22000E541B /* JSRiskEvaluateAlertView.m in Sources */,
+				66B4928F1E8D020D00C8CD37 /* JSRiskFooterView.m in Sources */,
 				668B87C91E890346000E541B /* AFURLResponseSerialization.m in Sources */,
 				668B865F1E88FC2C000E541B /* AppDelegate.m in Sources */,
 				668B87CE1E890346000E541B /* UIActivityIndicatorView+AFNetworking.m in Sources */,
-				668B876F1E88FE22000E541B /* JSRiskFooterView.m in Sources */,
 				668B87CB1E890346000E541B /* AFAutoPurgingImageCache.m in Sources */,
 				668B878A1E88FF08000E541B /* MJExtensionConst.m in Sources */,
 				668B87D31E890346000E541B /* UIWebView+AFNetworking.m in Sources */,
-				668B87671E88FE22000E541B /* JSGotoRiskQuestionTableViewCell.m in Sources */,
+				66B4928D1E8D020D00C8CD37 /* JSRiskEvaluateAlertView.m in Sources */,
 				668B87D01E890346000E541B /* UIImageView+AFNetworking.m in Sources */,
 				668B87921E88FF08000E541B /* NSObject+MJProperty.m in Sources */,
 				668B878F1E88FF08000E541B /* NSObject+MJClass.m in Sources */,
+				66B492851E8D020D00C8CD37 /* JSGotoRiskTableViewController.m in Sources */,
 				668B87CA1E890346000E541B /* AFURLSessionManager.m in Sources */,
 				668B87961E88FF1E000E541B /* UIView+CCJExtension.m in Sources */,
 				668B87D21E890346000E541B /* UIRefreshControl+AFNetworking.m in Sources */,
-				668B876E1E88FE22000E541B /* JSRiskEvaluateModel.m in Sources */,
 				668B878D1E88FF08000E541B /* MJPropertyKey.m in Sources */,
 				668B878B1E88FF08000E541B /* MJFoundation.m in Sources */,
+				66B4928B1E8D020D00C8CD37 /* JSQuestionTableViewCell.m in Sources */,
+				66B492891E8D020D00C8CD37 /* JSGotoRiskQuestionTableViewCell.m in Sources */,
 				668B878E1E88FF08000E541B /* MJPropertyType.m in Sources */,
-				668B87641E88FE22000E541B /* JSGotoRiskCell.m in Sources */,
 				668B878C1E88FF08000E541B /* MJProperty.m in Sources */,
 				668B87C81E890346000E541B /* AFURLRequestSerialization.m in Sources */,
-				668B876A1E88FE22000E541B /* JSQuestionTableViewCell.m in Sources */,
 				668B87CD1E890346000E541B /* AFNetworkActivityIndicatorManager.m in Sources */,
 				668B87C61E890346000E541B /* AFNetworkReachabilityManager.m in Sources */,
 				668B87901E88FF08000E541B /* NSObject+MJCoding.m in Sources */,
+				66B492871E8D020D00C8CD37 /* JSGotoRiskCell.m in Sources */,
 				668B87931E88FF08000E541B /* NSString+MJExtension.m in Sources */,
-				668B87691E88FE22000E541B /* JSGotoRiskTableViewController.m in Sources */,
 				668B865C1E88FC2C000E541B /* main.m in Sources */,
+				66B492861E8D020D00C8CD37 /* JSRiskEvaluateModel.m in Sources */,
 				668B87C51E890346000E541B /* AFHTTPSessionManager.m in Sources */,
 				668B87CC1E890346000E541B /* AFImageDownloader.m in Sources */,
 			);
