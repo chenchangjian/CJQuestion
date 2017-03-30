@@ -210,6 +210,8 @@ static NSString * const questionTitle = @"QuestionTitle";
             NSLog(@"self.riskScore = %d",self.riskScore);
 
             // 在这里可以发送请求将总分数上传
+            NSString *score = [NSString stringWithFormat:@"您测试的总分为:%d", self.riskScore];
+            [[[UIAlertView alloc] initWithTitle:@"提示" message:score delegate:nil cancelButtonTitle:@"我知道了" otherButtonTitles:nil, nil] show];
             
         }else
         {
